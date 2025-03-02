@@ -41,20 +41,20 @@ git clone https://github.com/USER/REPO.git
 3. Personal access tokens を開くと、 Fine-grained tokens (Preview) というのがあるので、それを選ぶ。
 4. Generate new token
 5. 諸々、入力する
-    1. 有効日数がデフォルト30日、選択肢は60日, 90日, カスタム, 無期限。
-        1. 月1回程度更新しなさいってことらしい。派遣エンジニアに契約期間だけ有効なパスを与える、みたいな感覚だな。契約更新したらトークンも更新するということか。1つのトークンを1人に1つずつ割り当てて使うことを前提にしている。
-    2. 許可するレポジトリを絞り込める。
-        1. public (read only), all, 個別に指定
-    3. 実際に与える権限を指定する
-        1. デフォルトでは権限なし
-        2. Repository permissions と Account permissions に分類されている。
-        3. それぞれを展開して項目を選ぶ。
-        4. Repository permissions の Contents に read/write を与えれば、通常の操作には十分。
-            1. Metadata read only は、必須なので勝手についてくる。
-        5. commit しない人には read only 権限だけで良い。
+    - 有効日数がデフォルト30日、選択肢は60日, 90日, カスタム, 無期限。
+        - 月1回程度更新しなさいってことらしい。派遣エンジニアに契約期間だけ有効なパスを与える、みたいな感覚だな。契約更新したらトークンも更新するということか。1つのトークンを1人に1つずつ割り当てて使うことを前提にしている。
+    - 許可するレポジトリを絞り込める。
+        - public (read only), all, 個別に指定
+    - 実際に与える権限を指定する
+        - デフォルトでは権限なし
+        - Repository permissions と Account permissions に分類されている。
+        - それぞれを展開して項目を選ぶ。
+        - Repository permissions の Contents に read/write を与えれば、通常の操作には十分。
+            - Metadata read only は、必須なので勝手についてくる。
+        - commit しない人には read only 権限だけで良い。
 6. Generate token
 7. 作られた token をコピーして保存する。
-    1. token 文字列そのものは一度しか表示されない。
+    - token 文字列そのものは一度しか表示されない。
 
 権限は、あとから Edit で追加・削除も可能なので、できるだけ絞り込んで作るのが良い。認証確認だけなら権限を与えなくても可能。
 
