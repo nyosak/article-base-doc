@@ -62,7 +62,7 @@ git clone https://github.com/USER/REPO.git
 
 ## 認証ストアに登録する
 
-.gitconfig とかに直接書く方法は推奨されていない。
+.gitconfig とかに平文で直接書く方法は推奨されていない。
 
 https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/credstores.md#plaintext-files
 
@@ -183,7 +183,7 @@ file:/home/USER/.gitconfig      credential.credentialStore=gpg
 
 git clone, git pull など、 remote にアクセスするコマンドを打つと認証画面が開く。
 ポップアップが開かないなら、ターミナルなり端末なりを起動しなおすと良いかもしれない。
-ブランチがまだ無い、などの状況なら、次のログインコマンドを使っても、認証画面を出すことができる。
+認証確認だけしたいというなら、次のログインコマンドを使っても、認証画面を出すことができる。
 
 ```bash
 git credential-manager github login
