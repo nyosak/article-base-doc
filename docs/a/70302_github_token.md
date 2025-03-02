@@ -189,13 +189,13 @@ git clone, git pull など、 remote にアクセスするコマンドを打つ�
 git credential-manager github login
 ```
 
-![git_auth_browser.png](https://nyosak.github.io/article-base-doc/media/70302_git_auth_browser.png)
+![git_auth_browser.png](https://nyosak.github.io/article-base-doc/media/70302_github_token_git_auth_browser.png)
 
 ブラウザまたはスマホアプリによる認証が表示される。こちらを使うとトークンを使わずに、一時的な認証をキャッシュできる。
 
 今回はトークンを使うので、 Token のタブを選び、トークン入力画面に切り替える。
 
-![git_auth_token.png](https://nyosak.github.io/article-base-doc/media/70302_git_auth_token.png)
+![git_auth_token.png](https://nyosak.github.io/article-base-doc/media/70302_github_token_git_auth_token.png)
 
 先程、 GitHub の管理画面で作ったトークンを貼り付け、 Sign in を実行する。
 
@@ -319,7 +319,7 @@ USER
 これで git 操作をしてみる。
 アカウントを選択するポップアップが表示された。
 
-![git_auth_switch.png](https://nyosak.github.io/article-base-doc/media/70302_git_auth_switch.png)
+![git_auth_switch.png](https://nyosak.github.io/article-base-doc/media/70302_github_token_git_auth_switch.png)
 
 これで選択すれば動作するが、面倒！
 
