@@ -873,6 +873,20 @@ article-markdown-tool/publish$ ./all_publish.py
 
 ```
 
+いきなり上記でもいいのだが、画像のリンクを確認したいので、 base だけ先行して投稿する。
+
+```bash
+article-markdown-tool/publish$ ./base_publish.py
+
+```
+
+リンクが確認できたら、全体を投稿する。
+
+```bash
+article-markdown-tool/publish$ ./all_publish.py
+
+```
+
 
 # 🌖️ 急
 
