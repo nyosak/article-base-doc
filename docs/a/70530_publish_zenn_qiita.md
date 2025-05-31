@@ -489,7 +489,7 @@ class write_title,write_doc,upload_media,to_public external
 
 flowchart TB
 
-init_py("＿＿init＿＿.py")
+init_py("\__init\__.py")
 conf_dirs(conf_dirs.py)
 conf_current(conf_current.py)
 
@@ -729,6 +729,17 @@ Preview: http://127.0.0.1:8888
 
 ```bash
 article-markdown-tool/publish$ ./base_diff.py 
+
+...
+--- a/docs/meta/70530_publish_zenn_qiita.yaml
++++ b/docs/meta/70530_publish_zenn_qiita.yaml
+@@ -1,4 +1,4 @@
+ title: Zenn, Qiita に GitHub から記事公開する — 実装編
+-tags: GitHub Qiita QiitaCLI Zenn ZennCLI Python
++tags: GitHub Qiita QiitaCLI Zenn ZennCLI
+ type: tech
+ emoji: 🐚
+...
 
 article-markdown-tool/publish$ ./base_commit.py 
 
