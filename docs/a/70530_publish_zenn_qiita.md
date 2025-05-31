@@ -334,7 +334,9 @@ article-markdown-tool/publish$ ./help.py
 
 ./base_diff.py    show git diff, git diff --cached, git status -s -b, git add -u
   -d --dry              disable git add -u
-./base_add_media.py   TODO copy and git add pictures
+./base_add_media.py   copy and git add pictures
+  -f --files            source files to copy into base media
+  -d --dry              disable file writing and git
 ./base_commit.py      git commit, push
   -m --message          commit message, default: update
 
@@ -728,6 +730,28 @@ Preview: http://127.0.0.1:8888
 - Qiita の mermaid で、アンダースコアのエスケープがエラー
   - mermaid というより、外側の markdown 処理の干渉か？
   - `#95;` などで回避
+
+![mermaid_escape_error.png](https://nyosak.github.io/article-base-doc/media/70530_publish_zenn_qiita_mermaid_escape_error.png)
+
+スクリーンショットの画像（上記）を追加する。
+
+```bash
+article-markdown-tool/publish$ ./base_add_media.py --file ~/Pictures/Screenshots/mermaid_escape_error.png 
+main launched manually.
+Namespace(files=['/home/kuro/Pictures/Screenshots/mermaid_escape_error.png'], dry=False)
+
+... 略
+
+destination: docs/media/70530_publish_zenn_qiita_mermaid_escape_error.png
+ - ![mermaid_escape_error.png](https://nyosak.github.io/article-base-doc/media/70530_publish_zenn_qiita_mermaid_escape_error.png)
+
+git add docs/media/70530_publish_zenn_qiita_mermaid_escape_error.png
+
+... 以下略
+
+```
+
+出力されたリンクを本文にコピペする。
 
 編集したら、まず、 base を反映させてから確認。
 
