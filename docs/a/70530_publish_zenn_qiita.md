@@ -489,7 +489,7 @@ class write_title,write_doc,upload_media,to_public external
 
 flowchart TB
 
-init_py("\_\_init\_\_.py")
+init_py("&#95;&#95;init&#95;&#95;.py")
 conf_dirs(conf_dirs.py)
 conf_current(conf_current.py)
 
@@ -659,7 +659,53 @@ Branch '70530_publish_zenn_qiita' set up to track remote branch '70530_publish_z
 
 GitHub のレポジトリをブラウザで開いて、ブランチ 70530_publish_zenn_qiita に切り替え、プレビュー確認する。
 
-Zenn と Qiita に
+Zenn と Qiita に記事を転送して新規作成する。
+
+```bash
+article-markdown-tool/publish$ ./zenn_init.py 
+main launched manually.
+Namespace(dry=False, nogit=False)
+---
+    Begin --- 2025-05-31 16:51:42
+    -   
+-       create and update an article file for zenn.
+-       
+    ---
+    
+new zenn article name generated: 70530_publish_zenn_qiita-16575
+
+... 以下略
+
+```
+
+```bash
+article-markdown-tool/publish$ ./qiita_init.py 
+main launched manually.
+Namespace(dry=False, nogit=False)
+---
+    Begin --- 2025-05-31 16:53:41
+    -   
+-       create and update an article file for qiita.
+-       
+    ---
+    
+npx qiita new 70530_publish_zenn_qiita
+created: 70530_publish_zenn_qiita.md
+
+0
+0
+
+created: 70530_publish_zenn_qiita.md
+
+... 以下略
+
+```
+
+Zenn と Qiita の記事をプレビューする。
+
+```bash
+
+```
 
 
 
@@ -671,10 +717,10 @@ Zenn と Qiita に
 - レポジトリ名やらブランチ名やら覚えなくて良い
 - 原稿を手直ししてもすぐに同期できるので、訂正が負担にならない
 
-今後は、今回手をつけなかった、公開済み記事の編集機能をおいおい実装したい。
+公開済み記事の編集機能も、いずれ実装したい。執筆時の記憶を呼び覚ます呪文。
 
 - *_checkout.py
 
-また、ちょっとした誤字等修正のように、プレビュー省略して一気に投稿するような機能も作りたい。
+ちょっとした誤字等の修正など、プレビュー抜きで一気に投稿するような機能もいずれ作りたい。
 
 - nolook_publish.py
