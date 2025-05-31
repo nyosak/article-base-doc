@@ -22,6 +22,8 @@
 
 sequenceDiagram
 
+rect rgb(238, 233, 221)
+
 Actor me
 participant tool
 participant base
@@ -64,6 +66,7 @@ tool-)zenn: プルリク作成、マージ、作業ブランチ削除
 tool-)qiita: プルリク作成、マージ、作業ブランチ削除
 tool-->>-me: 投稿完了
 
+end
 
 ```
 
@@ -724,7 +727,7 @@ Preview: http://127.0.0.1:8888
   - キーワードの修正は base meta のファイルを直接編集する
 - Qiita の mermaid で、アンダースコアのエスケープがエラー
   - mermaid というより、外側の markdown 処理の干渉か？
-  - 危ないものは使わない方針で、全角アンダースコアにする
+  - `#95;` などで回避
 
 編集したら、まず、 base を反映させてから確認。
 
@@ -746,7 +749,105 @@ article-markdown-tool/publish$ ./base_commit.py
 
 ```
 
+続いて、 Zenn Qiita に反映させる。既存ファイルへの更新なので update を使う。
 
+```bash
+article-markdown-tool/publish$ ./zenn_update.py 
+main launched manually.
+Namespace(dry=False, nogit=False)
+---
+    Begin --- 2025-05-31 18:07:40
+    -   
+-       create and update an article file for zenn.
+-       
+    ---
+    
+=== BEFORE: articles/70530_publish_zenn_qiita-16575.md ===
+---
+title: "Zenn, Qiita に GitHub から記事公開する — 実装編"
+topics: ["GitHub", "Qiita", "QiitaCLI", "Zenn", "ZennCLI", "Python"]
+type: "tech"
+emoji: "🐚"
+published: true
+---
+# Zenn, Qiita に GitHub から記事公開する — 実装編
+=== Truncated ===
+
+... 略
+
+=== AFTER UPDATE META: articles/70530_publish_zenn_qiita-16575.md ===
+---
+title: "Zenn, Qiita に GitHub から記事公開する — 実装編"
+topics: ["GitHub", "Qiita", "QiitaCLI", "Zenn", "ZennCLI"]
+type: "tech"
+emoji: "🐚"
+published: true
+---
+
+... 以下略
+
+```
+
+```bash
+article-markdown-tool/publish$ ./qiita_update.py 
+main launched manually.
+Namespace(dry=False, nogit=False)
+---
+    Begin --- 2025-05-31 18:08:48
+    -   
+-       create and update an article file for qiita.
+-       
+    ---
+    
+=== BEFORE: public/70530_publish_zenn_qiita.md ===
+---
+title: 'Zenn, Qiita に GitHub から記事公開する — 実装編'
+tags:
+  - GitHub
+  - Qiita
+  - QiitaCLI
+  - Zenn
+  - ZennCLI
+  - Python
+private: false
+updated_at: ''
+id: null
+organization_url_name: null
+slide: false
+ignorePublish: false
+---
+# Zenn, Qiita に GitHub から記事公開する — 実装編
+=== Truncated ===
+
+... 略
+
+=== AFTER UPDATE META: public/70530_publish_zenn_qiita.md ===
+---
+title: 'Zenn, Qiita に GitHub から記事公開する — 実装編'
+tags:
+  - GitHub
+  - Qiita
+  - QiitaCLI
+  - Zenn
+  - ZennCLI
+private: false
+updated_at: ''
+id: null
+organization_url_name: null
+slide: false
+ignorePublish: false
+---
+
+... 以下略
+
+```
+
+良さそうなので、投稿する。
+
+```bash
+article-markdown-tool/publish$ ./all_publish.py
+
+```
 
 
 # 🌖️ 急
