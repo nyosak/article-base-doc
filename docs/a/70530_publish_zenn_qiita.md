@@ -489,7 +489,7 @@ class write_title,write_doc,upload_media,to_public external
 
 flowchart TB
 
-init_py("&#95;&#95;init&#95;&#95;.py")
+init_py("＿＿init＿＿.py")
 conf_dirs(conf_dirs.py)
 conf_current(conf_current.py)
 
@@ -704,8 +704,36 @@ created: 70530_publish_zenn_qiita.md
 Zenn と Qiita の記事をプレビューする。
 
 ```bash
+article-markdown-tool/publish$ ./zenn_preview.sh 
+/home/kuro/app_doc/nyosak/article-zenn-doc
+👀 Preview: http://localhost:8000
+^C
+article-markdown-tool/publish$ ./qiita_preview.sh 
+/home/kuro/app_doc/nyosak/article-qiita-doc
+Preview: http://127.0.0.1:8888
+^C
 
 ```
+
+問題が出たので修正する。
+🖊
+
+- キーワードは Zenn も Qiita も 5つまで。
+  - せっかく Python 指定したのだが、外すか...
+  - キーワードの修正は base meta のファイルを直接編集する
+- Qiita の mermaid で、アンダースコアのエスケープがエラー
+  - mermaid というより、外側の markdown 処理の干渉か？
+  - 危ないものは使わない方針で、全角アンダースコアにする
+
+編集したら、まず、 base を反映させてから確認。
+
+```bash
+article-markdown-tool/publish$ ./base_diff.py 
+
+article-markdown-tool/publish$ ./base_commit.py 
+
+```
+
 
 
 
