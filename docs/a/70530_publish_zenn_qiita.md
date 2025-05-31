@@ -64,6 +64,7 @@ tool-)zenn: プルリク作成、マージ、作業ブランチ削除
 tool-)qiita: プルリク作成、マージ、作業ブランチ削除
 tool-->>-me: 投稿完了
 
+
 ```
 
 ## 記憶
@@ -489,7 +490,7 @@ class write_title,write_doc,upload_media,to_public external
 
 flowchart TB
 
-init_py("\__init\__.py")
+init_py("#95;#95;init#95;#95;.py")
 conf_dirs(conf_dirs.py)
 conf_current(conf_current.py)
 
