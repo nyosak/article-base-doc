@@ -163,6 +163,22 @@ LEARN MORE
 
 ```
 
+```bash
+article-base-doc$ gh pr status
+
+Relevant pull requests in nyosak/article-base-doc
+
+Current branch
+  There is no pull request associated with [70530_publish_zenn_qiita]
+
+Created by you
+  You have no open pull requests
+
+Requesting a code review from you
+  You have no pull requests to review
+
+```
+
 画面出力が、通常の git コマンド同様に、見た目重視で扱いづらいと思ったが、実は json 出力できるのだった。
 
 ```bash
@@ -293,6 +309,8 @@ created: articles/435d6ae8e8ee56.md
 不要なものを丁寧に除去することが必要だった。
 
 ## 全貌
+
+https://github.com/nyosak/article-markdown-tool/tree/main/publish
 
 ### help.py
 
@@ -456,7 +474,36 @@ class write_title,write_doc,upload_media,to_public external
 
 ### コードの視点から
 
+#### ディレクトリ他、低レベルのモジュール
+
+ローカルディレクトリなどは、ここの conf_dirs で直接定義している。
+
+```mermaid
+%%{init:
+	{
+		"theme": "forest",
+		"logLevel": 2,
+		"flowchart": { "curve": "linear" }
+	}
+}%%
+
+flowchart TB
+
+init_py("\_\_init\_\_.py")
+conf_dirs(conf_dirs.py)
+conf_current(conf_current.py)
+
+conf_current --> conf_dirs --> init_py
+conf_current ---> init_py
+
+linkStyle default color:#936, stroke:#f69, stroke-width:2px;
+classDef default fill:#fcc, stroke:#345, stroke-width:3px, font-size:14pt;
+
+```
+
 #### git 操作、 npx 操作
+
+レポジトリへの参照はここの common_git で、 conf_dirs のローカルディレクトリ名をそのまま使うというルールで定義している。
 
 ```mermaid
 %%{init:
@@ -557,8 +604,62 @@ Namespace(series='a', name='publish_zenn_qiita', title='Zenn, Qiita に GitHub �
 差分確認し、 git add
 
 ```bash
+article-markdown-tool/publish$ ./base_diff.py 
+main launched manually.
+Namespace(dry=False)
+---
+    Begin --- 2025-05-31 08:00:24
+    -   
+-       handle git diff; git add -u; for article-base-doc.
+-       
+    ---
+    
+at /home/kuro/app_doc/nyosak/article-base-doc
+git diff
+diff --git a/docs/a/70530_publish_zenn_qiita.md b/docs/a/70530_publish_zenn_qiita.md
+index 82eeb5e..bc9607d 100644
+--- a/docs/a/70530_publish_zenn_qiita.md
++++ b/docs/a/70530_publish_zenn_qiita.md
+
+... 略（超長い差分） ...
+
+files added to staged.
+at /home/kuro/app_doc/nyosak/article-base-doc
+git status -s -b
+## 70530_publish_zenn_qiita
+M  docs/a/70530_publish_zenn_qiita.md
+---
+    Done --- 2025-05-31 08:00:37
+    -   
+-       handle git diff; git add -u; for article-base-doc.
+-       
+    ---
 
 ```
+
+差分確認したので、ブランチにコミットする。コミットメッセージを指定可能だが、デフォルトで良いので省略する。
+
+```bash
+article-markdown-tool/publish$ ./base_commit.py 
+main launched manually.
+Namespace(message='update')
+at /home/kuro/app_doc/nyosak/article-base-doc
+git commit -m update 70530_publish_zenn_qiita
+[70530_publish_zenn_qiita 0cd9bc9] update 70530_publish_zenn_qiita
+ 1 file changed, 561 insertions(+)
+
+0
+at /home/kuro/app_doc/nyosak/article-base-doc
+git push -u https://nyosak@github.com/nyosak/article-base-doc.git 70530_publish_zenn_qiita
+Branch '70530_publish_zenn_qiita' set up to track remote branch '70530_publish_zenn_qiita' from 'https://nyosak@github.com/nyosak/article-base-doc.git'.
+
+0
+
+```
+
+GitHub のレポジトリをブラウザで開いて、ブランチ 70530_publish_zenn_qiita に切り替え、プレビュー確認する。
+
+Zenn と Qiita に
 
 
 
@@ -569,3 +670,11 @@ Namespace(series='a', name='publish_zenn_qiita', title='Zenn, Qiita に GitHub �
 - レポジトリを移動しなくても、markdown-tool のコマンドで完結する
 - レポジトリ名やらブランチ名やら覚えなくて良い
 - 原稿を手直ししてもすぐに同期できるので、訂正が負担にならない
+
+今後は、今回手をつけなかった、公開済み記事の編集機能をおいおい実装したい。
+
+- *_checkout.py
+
+また、ちょっとした誤字等修正のように、プレビュー省略して一気に投稿するような機能も作りたい。
+
+- nolook_publish.py
