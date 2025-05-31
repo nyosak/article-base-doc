@@ -876,7 +876,39 @@ article-markdown-tool/publish$ ./all_publish.py
 いきなり上記でもいいのだが、画像のリンクを確認したいので、 base だけ先行して投稿する。
 
 ```bash
-article-markdown-tool/publish$ ./base_publish.py
+article-markdown-tool/publish$ ./base_publish.py 
+main launched manually.
+Namespace(dry=False, nomerge=False, ignore=False)
+
+... 適当に省略しつつ
+
+Good: status is clear.
+
+gh pr status --jq .currentBranch | select(.baseRefName=="main" and .state=="OPEN") --json id,number,url,state,closed,baseRefName,headRefName
+
+creating a new pull request
+gh pr create --title 70530_publish_zenn_qiita to main --base main --head 70530_publish_zenn_qiita --body 70530_publish_zenn_qiita
+https://github.com/nyosak/article-base-doc/pull/8
+
+gh pr status --jq .currentBranch | select(.baseRefName=="main" and .state=="OPEN") --json id,number,url,state,closed,baseRefName,headRefName
+{"baseRefName":"main","closed":false,"headRefName":"70530_publish_zenn_qiita","id":"PR_kwDOOAVFLM6YbWqK","number":8,"state":"OPEN","url":"https://github.com/nyosak/article-base-doc/pull/8"}
+
+merging pull request #8
+gh pr merge 8 --merge --delete-branch
+Updating 5b55d9d..35ca702
+Fast-forward
+ README.md                                          |   1 +
+ docs/a/70530_publish_zenn_qiita.md                 | 905 +++++++++++++++++++++
+ ...530_publish_zenn_qiita_mermaid_escape_error.png | Bin 0 -> 13784 bytes
+ docs/meta/70530_publish_zenn_qiita.yaml            |   4 +
+ 4 files changed, 910 insertions(+)
+ create mode 100644 docs/a/70530_publish_zenn_qiita.md
+ create mode 100644 docs/media/70530_publish_zenn_qiita_mermaid_escape_error.png
+ create mode 100644 docs/meta/70530_publish_zenn_qiita.yaml
+
+merged
+
+... 以下略
 
 ```
 
