@@ -3,6 +3,7 @@
 ## articles
 
 <!-- ARTICLES DESCENDANT -->
+- [virtualbox で Windows 95 woGoogle groups の新規メンバーに Promo code を自動送信する](docs/a/70612_vbox_vmware_win95.md)
 - [GAS で Google groups の新規メンバーに Promo code を自動送信する](docs/a/70603_promo_code_sender.md)
 - [Zenn, Qiita に GitHub から記事公開する — 実装編](docs/a/70530_publish_zenn_qiita.md)
 - [Zenn, Qiita に GitHub から記事公開する — 模索編](docs/a/70525_publish_zenn_qiita.md)
