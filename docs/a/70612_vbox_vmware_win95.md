@@ -117,8 +117,7 @@ Mac版とかだと、どこかに、OSに合わせてビルド済みの module �
 
 予想したとおりだ。だが、これで動くならその選択肢もあるのか。とりあえず、解決策を探ってみる。
 
-How to fix and prevent VirtualBox Kernel driver not installed
-https://superuser.com/questions/1285964/how-to-fix-and-prevent-virtualbox-kernel-driver-not-installed
+- [How to fix and prevent VirtualBox Kernel driver not installed](https://superuser.com/questions/1285964/how-to-fix-and-prevent-virtualbox-kernel-driver-not-installed)
 
 こいつの 5番の答えを参考にした。
 
@@ -159,8 +158,7 @@ USB接続6倍速CDドライブ なるものが出てきた。むっちゃ遅い�
 
 調べてみると、こいつが必要らしい。
 
-Windows 95 High-Speed Processor Support v. 3.0 By LoneCrusader
-https://archive.org/details/fix-95-cpu-v3-final
+- [Windows 95 High-Speed Processor Support v. 3.0 By LoneCrusader](https://archive.org/details/fix-95-cpu-v3-final)
 
 最近の cpu clock は当時から見れば想像できない速さなのでエラーとみなされるらしい。
 
@@ -245,8 +243,8 @@ Windows 95 を C ドライブに導入している必要があるが、インス
 
 仮想系の設定を、なるべくハードウェア依存しない方式にしてみる。
 
-Acceleration NONE
-disable Enable nested paging
+- Acceleration NONE
+- disable Enable nested paging
 
 `エラー（画像略）`
 
@@ -289,11 +287,13 @@ vboxdrv.sh: Building VirtualBox kernel modules.
 module が build できた。
 どうやら、 `libelf-dev` がすべてを解決したようだ。
 
+作った vm は新しいバージョンにそのまま引き継がれている。
+
 Windows 95 が起動した。
 
 VGAドライバが非対応なので、次のドライバを導入する必要がある。
 
-https://web.archive.org/web/20190210203844/http://bearwindows.boot-land.net/140214.zip
+- https://web.archive.org/web/20190210203844/http://bearwindows.boot-land.net/140214.zip
 
 CD がマウントできず、導入できない。 VirtualBox Guest Additions も導入できない。
 そういえば、先駆者のみなさん、最初にすべてをハードディスクに転送してから setup に進むという手順だった。
