@@ -111,14 +111,11 @@ Mac版とかだと、どこかに、OSに合わせてビルド済みの module �
 
 ## とりあえず起動してみる
 
-!!image
-cannot_enumerate_usb
+![cannot_enumerate_usb.png](https://nyosak.github.io/article-base-doc/media/70612_vbox_vmware_win95_cannot_enumerate_usb.png)
 
 > Can't enumerate USB devices ...
 
-予想したとおりだ。
-だが、これで動くならその選択肢もあるのか。
-とりあえず、解決策を探ってみる。
+予想したとおりだ。だが、これで動くならその選択肢もあるのか。とりあえず、解決策を探ってみる。
 
 How to fix and prevent VirtualBox Kernel driver not installed
 https://superuser.com/questions/1285964/how-to-fix-and-prevent-virtualbox-kernel-driver-not-installed
@@ -152,11 +149,9 @@ USB接続6倍速CDドライブ なるものが出てきた。むっちゃ遅い�
 
 `エラー。このまま停止した`
 
-guru_meditation
-windows95_splash
+![guru_meditation.png](https://nyosak.github.io/article-base-doc/media/70612_vbox_vmware_win95_guru_meditation.png)
 
-!! gazou
-
+![windows95_splash.png](https://nyosak.github.io/article-base-doc/media/70612_vbox_vmware_win95_windows95_splash.png)
 
 余計なusbとか全部無効にする。
 
@@ -305,22 +300,19 @@ CD がマウントできず、導入できない。 VirtualBox Guest Additions �
 そういうことか。
 
 1. Windows 2000 だとCDをマウントできるので、まずはそちらに VirtualBox Guest Additions を導入した。これで、host 側とファイル共有できるようになり、作業可能になる。
-1. Windows 2000 側に、 Windows 95 の C ドライブを一時的にマウントして、 Windows 2000 経由で必要なファイルを転送する。
-1. Windows 95 を起動して、ディスプレイ設定を調整する。
+2. Windows 2000 側に、 Windows 95 の C ドライブを一時的にマウントして、 Windows 2000 経由で必要なファイルを転送する。
+3. Windows 95 を起動して、ディスプレイ設定を調整する。
 
 以上の手順で、とりあえずは起動した。
 ハードウェアの不整合があるっぽくて、何やらドライバを導入しようとするが、インストールディスクを挿入できない以上、何もできない。
 また、 Guest Additions は、あいかわらず導入できない。/usr/share/virtualbox/VBoxGuestAdditions.iso のイメージを使って、ハードディスクから起動してもエラーになる。subst でドライブレターを割り当ててみても結果は変わらなかった。
 
-guest_addition_error
-!! image
-
+![guest_addition_error.png](https://nyosak.github.io/article-base-doc/media/70612_vbox_vmware_win95_guest_addition_error.png)
 
 それでも、目的のソフトは動いた。
 Guest Additions 入れてないので、マウスの扱いに神経が必要だが、使えた。
 
-band18_857
-!! iamge
+![band18_857.png](https://nyosak.github.io/article-base-doc/media/70612_vbox_vmware_win95_band18_857.png)
 
 
 最初に出ていた usb enumeration error は次の手順で解決した。
