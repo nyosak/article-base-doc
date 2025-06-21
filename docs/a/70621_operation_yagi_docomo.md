@@ -40,14 +40,14 @@ au 向けには、 band 18 のダウンリンクが 860-875MHz 、アップリ�
 
 ここに記載の波長で十分だが、とりあえず計算はしてみる。
 
-電波の周波数 $f$ と波長 $λ$ は、高速 $c$ と次の関係にある。
+電波の周波数 $f$ と波長 $λ$ は、光速 $c$ と次の関係にある。
 
 ```math
 c = fλ
 ```
 
 携帯の band を GHz 単位にすれば、 $10^9$ なので、
-高速 $3 \times 10^{10} cm/s$ は、 $30cm/ns$ として計算すればよい。
+光速 $3 \times 10^{10} cm/s$ は、 $30cm/ns$ として計算すればよい。
 単純な話、 $30 \div f(周波数GHz)$ で、 $λ(波長cm)$ が出る。
 
 ```
@@ -149,6 +149,8 @@ w1c,	0.0,	1.0
 2,	3.0,	3,	50.0,	120,	60,	0
 ```
 
+![band18_857.png](https://nyosak.github.io/article-base-doc/media/70612_vbox_vmware_win95_band18_857.png)
+
 ## 材料
 
 ホームセンターで調達する。サイズが手頃な docomo 用を先に試す。
@@ -160,53 +162,58 @@ w1c,	0.0,	1.0
 
 家にあった輪ゴムでも良かったのだが、少し太めのがあったので調達した。
 
-！！画像
-
-
-
+![shopping.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_shopping.png)
 
 ## 加工
 
 ポイントは次のとおり。
 
 - サイズを間違えない
+- アルミ棒は切断箇所ごとに切り代を 1mm 入れておく
 - 切る前に油性ペンでマークして、どれがどれだか区別がつくようにする
-- 穴を垂直にあける
 - 角で怪我をしないよう、ヤスリがけする
 - 給電素子パーツは、スマホに置き換わるのでスキップし、位置だけを示す
 - 木材は両端に 20mm 程度の余白を追加する
+- 穴を垂直にあける
 
 簡易図面を用意しておくか。
 
-!! gazou
-
-
-
+![docomo_band42.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_docomo_band42.png)
 
 mermaid の xychart でこれぐらい描ければ便利なのだが無理っぽいので、素直に Google sheet に計算結果を貼り付けて作ったチャートを画像出力した。混合チャートだと横軸が等間隔しかできず若干リアルでないのだが、まあいいだろう。
 
 横軸も実際の長さにして、できあがりに近い絵にするとこうだ。
 
-!!gazo
+![docomo_band42_realized.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_docomo_band42_realized.png)
 
+垂直に穴あけするためのガイドを作ってみた。端材に軽く凹みを入れるという簡易なものだ。
 
+![guide.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_guide.png)
 
+アルミ棒はニッパーで軽く切断できるが、切断面が凶器かってぐらい鋭いので、要注意だ。
 
+![cutting.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_cutting.png)
+
+![alminium.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_alminium.png)
+
+がたがたやん。
+
+![wood.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_wood.png)
+
+それでもなんとか完成。
+
+![anntena.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_anntena.png)
 
 ## 反省会
 
-加工は想像以上に難しかった。
+加工は想像より難しかった。
 
 - 穴あけ位置が、ドリルを手持ちする方向の癖により、立ち位置によって上下にずれた
 - ガイドで鉛直を決めても、それがキープできず特に最初のが斜めの穴になった
 - 3mm棒に3mm刃では不十分で、穴を拡大する必要があった
 
-! gazo
-
-
-
-
 次にやるときは、
+
 - キリの穴を2mmぐらいの刃で少し拡張しておくのがいいかも
 - ガイドの習熟の予備練習を入れた方がいいかも
 - ガイドを置くための端材を用意して、ガイドを棒と平行に置いた方が安定していいかも
@@ -236,10 +243,7 @@ mermaid の xychart でこれぐらい描ければ便利なのだが無理っぽ
 - アンテナが小さすぎて、本来の給電位置にスマホ内蔵のアンテナを正しく設置するのが、構造的に無理なので、やや後方に置くことになり、アンテナ性能を引き出せていない
 - 基地局までの距離が $約 400m$ なので、この距離で 5G受信するだけでも、実は凄いことかもしれない
 
-! gazo
-
-
-
+![shoot1.png](https://nyosak.github.io/article-base-doc/media/70621_operation_yagi_docomo_shoot1.png)
 
 
 # 🌖️ 急
