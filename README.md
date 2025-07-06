@@ -3,6 +3,7 @@
 ## articles
 
 <!-- ARTICLES DESCENDANT -->
+- [八木作戦 — 三射](docs/a/70705_operation_yagi_au.md)
 - [八木作戦 —  二射](docs/a/70628_operation_yagi_au.md)
 - [八木作戦 — 一射](docs/a/70621_operation_yagi_docomo.md)
 - [VirtualBox で Windows 95 を久々に起動する](docs/a/70612_vbox_vmware_win95.md)
