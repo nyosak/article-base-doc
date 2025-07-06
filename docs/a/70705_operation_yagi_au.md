@@ -178,5 +178,5 @@ au回線があまりにも使えないので、 7月で解約しようかなど�
 
 - 初: [八木作戦 — 一射](https://qiita.com/nyosaki/items/353fa12f7d1ba58121ef)
 - 弐: [八木作戦 — 二射](https://qiita.com/nyosaki/items/0f6007f08086de1ffbcb)
-- 参: [八木作戦 — 三射]()
+- 参: [八木作戦 — 三射](https://qiita.com/nyosaki/items/2fb23af2a560c02ff946)
 - 零: [VirtualBox で Windows 95 を久々に起動する](https://qiita.com/nyosaki/items/3f4de45a5a8b527bc6cd)
