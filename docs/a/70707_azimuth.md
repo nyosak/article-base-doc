@@ -456,7 +456,9 @@ cos(\alpha) cos(\beta) & cos(\alpha) sin(\beta) sin(\gamma) - sin(\alpha) cos(\g
 sin(\alpha) cos(\beta) & sin(\alpha) sin(\beta) sin(\gamma) + cos(\alpha) cos(\gamma) & sin(\alpha) sin(\beta) cos(\gamma) - cos(\alpha) sin(\gamma) \\
 -sin(\beta) & cos(\beta) sin(\gamma) & cos(\beta) cos(\gamma)
 \end{pmatrix}
+
 ```
+
 
 3行目の要素には $\alpha$ が含まれない。つまり、方位角に依らず、スマホの傾きがどうなっているかを大雑把に知る目安となる。
 
