@@ -434,36 +434,37 @@ R
 = R_z(\alpha) R_y(\beta) R_x(\gamma)
 
 =
-\begin{bmatrix}
+\begin{pmatrix}
 cos(\alpha) & -sin(\alpha) & 0 \\
 sin(\alpha) & cos(\alpha) & 0 \\
 0 & 0 & 1
-\end{bmatrix}
-\begin{bmatrix}
+\end{pmatrix}
+\begin{pmatrix}
 cos(\beta) & 0 & sin(\beta) \\
 0 & 1 & 0 \\
 -sin(\beta) & 0 & cos(\beta)
-\end{bmatrix}
-\begin{bmatrix}
+\end{pmatrix}
+\begin{pmatrix}
 1 & 0 & 0 \\
 0 & cos(\gamma) & -sin(\gamma) \\
 0 & sin(\gamma) & cos(\gamma)
-\end{bmatrix}
+\end{pmatrix}
+
 =
-\begin{bmatrix}
+\begin{pmatrix}
 cos(\alpha) cos(\beta) & cos(\alpha) sin(\beta) sin(\gamma) - sin(\alpha) cos(\gamma) & cos(\alpha) sin(\beta) cos(\gamma) + sin(\alpha) sin(\gamma) \\
 sin(\alpha) cos(\beta) & sin(\alpha) sin(\beta) sin(\gamma) + cos(\alpha) cos(\gamma) & sin(\alpha) sin(\beta) cos(\gamma) - cos(\alpha) sin(\gamma) \\
 -sin(\beta) & cos(\beta) sin(\gamma) & cos(\beta) cos(\gamma)
-\end{bmatrix}
+\end{pmatrix}
 ```
 
 3行目の要素には $\alpha$ が含まれない。つまり、方位角に依らず、スマホの傾きがどうなっているかを大雑把に知る目安となる。
 
-3行1列の要素 $-sin(\beta)$ は、 y 軸まわりの回転を示し、飛行機においては pitch だが、スマホのデバイス座標では roll を示している。水平のときに 0 。鉛直のとき、右側（電源ボタン）が下なら -1 、上なら 1 。
+3行1列の要素 $-\sin(\beta)$ は、 y 軸まわりの回転を示し、飛行機においては pitch だが、スマホのデバイス座標では roll を示している。水平のときに 0 。鉛直のとき、右側（電源ボタン）が下なら -1 、上なら 1 。
 
-3行2列の要素 $cos(\beta) sin(\gamma)$ は、 roll と pitch の組み合わせになる。スマホが鉛直のときに、 orientation 相当（ui の動きにかかわらず、スマホ本体の向き）の指標になる。 portrait のときに、正置なら 1 倒置なら -1 。 landscape のときに 0 。
+3行2列の要素 $\cos(\beta) \sin(\gamma)$ は、 roll と pitch の組み合わせになる。スマホが鉛直のときに、 orientation 相当（ui の動きにかかわらず、スマホ本体の向き）の指標になる。 portrait のときに、正置なら 1 倒置なら -1 。 landscape のときに 0 。
 
-3行3列の要素 $cos(\beta) cos(\gamma)$ は、スマホが水平表のときに 1 となる。水平裏のときに -1 。縦横斜め関係なく、スマホ画面が鉛直のとき、つまりカメラが水平方向を向いているときに 0 となる。
+3行3列の要素 $\cos(\beta) \cos(\gamma)$ は、スマホが水平表のときに 1 となる。水平裏のときに -1 。縦横斜め関係なく、スマホ画面が鉛直のとき、つまりカメラが水平方向を向いているときに 0 となる。
 
 ## 現実的なパターン
 
