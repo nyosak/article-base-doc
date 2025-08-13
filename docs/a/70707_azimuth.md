@@ -424,8 +424,7 @@ Auto-rotate により、画面表示は正置となる。リアカメラが捉�
 
 3軸の任意回転を数式にしたものが記載されている。
 
-```
-$$
+```math
 R
 = R_{device_azimuth} R_{device_roll} R_{device_pitch}
 = R_{yaw} R_{pitch} R_{roll}
@@ -452,7 +451,6 @@ cos(\alpha) cos(\beta) & cos(\alpha) sin(\beta) sin(\gamma) - sin(\alpha) cos(\g
 sin(\alpha) cos(\beta) & sin(\alpha) sin(\beta) sin(\gamma) + cos(\alpha) cos(\gamma) & sin(\alpha) sin(\beta) cos(\gamma) - cos(\alpha) sin(\gamma) \\
 -sin(\beta) & cos(\beta) sin(\gamma) & cos(\beta) cos(\gamma)
 \end{bmatrix}
-$$
 ```
 
 3行目の要素には $\alpha$ が含まれない。つまり、方位角に依らず、スマホの傾きがどうなっているかを大雑把に知る目安となる。
@@ -484,7 +482,7 @@ $$
 
 ただし、カメラが天頂および地球の中心を向いているときに、方位角は不定となり、その周辺では表示が不安定になる。
 
-軸変換前の原始 rotation matrix の 3行3列要素の絶対値を見ると良い。これが閾値以上のときに、方位が不安定とのメッセージを画面に出してやればいい。閾値は目的により変わってくると思うが、たとえば、 0.7 以上で黄色信号 0.9 以上で赤信号、 0.85 以上で黄色信号 0.95 以上で赤信号、などが考えられる。ちなみに portrait で左右に傾けず持っているなら $\beta = 1$ なので、 $\arccos(0.7) = 0.795 \rad = 45.6 \degree$ なので、カメラには地面しか映らない程度になっている。
+軸変換前の原始 rotation matrix の 3行3列要素の絶対値を見ると良い。これが閾値以上のときに、方位が不安定とのメッセージを画面に出してやればいい。閾値は目的により変わってくると思うが、たとえば、 0.7 以上で黄色信号 0.9 以上で赤信号、 0.85 以上で黄色信号 0.95 以上で赤信号、などが考えられる。ちなみに portrait で左右に傾けず持っているなら $\beta = 1$ なので、 $\arccos(0.7) = 0.795 \radian = 45.6 \degree$ なので、カメラには地面しか映らない程度になっている。
 
 先の実測で、天頂から $15 \degree$ 程度離れたら azimuth が十分に機能することを確認できているので、 $\cos(15 \degree) = 0.966$ あたりまでは余裕ということになる。
 
