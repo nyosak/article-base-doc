@@ -3,6 +3,7 @@
 ## articles
 
 <!-- ARTICLES DESCENDANT -->
+- [Android で方角センサーを使うときの座標について](docs/a/70707_azimuth.md)
 - [八木作戦 — 三射](docs/a/70705_operation_yagi_au.md)
 - [八木作戦 —  二射](docs/a/70628_operation_yagi_au.md)
 - [八木作戦 — 一射](docs/a/70621_operation_yagi_docomo.md)
