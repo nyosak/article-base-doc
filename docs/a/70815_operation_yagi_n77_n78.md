@@ -21,6 +21,10 @@
 
 ## 必要なものを用意しよう。
 
+![prepare1.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_prepare1.png)
+
+![prepare2.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_prepare2.png)
+
 割り箸を 2 本、園芸用ビニタイを 40cm ぐらい、ビニタイを切るニッパーかハサミ、固定するための接着剤かテープ、紙やすり、定規、紙と鉛筆、洗濯バサミ 3 つ、を用意してね。
 
 ビニタイは、中に軟鉄という金属の針金が入っているのを選んでね。安いのを選んでおけば間違いないけど、材料の表示をしっかり確認してね。ここに電気が流れることが大切なんだ。
@@ -33,6 +37,8 @@
 
 ### 割り箸の図面
 
+![wood_plan.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wood_plan.png)
+
 - 紙に定規でまっすぐの線を引いてね。 20cm より長くしてね。
 - 線の左端に目盛り線を引いてね。ここを定規の 0 に合わせるよ。
 - 定規を動かさないようにして、次の長さの位置に目盛り線を引いてね。
@@ -42,6 +48,8 @@
 - これは、あとで割り箸に印をつけるときに使うよ。
 
 ### ビニタイの図面
+
+![wire_plan.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wire_plan.png)
 
 - 紙のあいているところに、1 から 9 までの数字を書いてね。詰めすぎないようにしよう。
 - 横に次の数字を書こう。
@@ -54,6 +62,8 @@
 
 ## 次は、割り箸に印をつけるよ。割り箸の図面を使うよ。
 
+![wood_mark.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wood_mark.png)
+
 - 割り箸を線に沿って置くよ。
 - 箸のおしりの端を図面の 0 のところに合わせてね。
 - 目盛り線のところに、鉛筆で箸に印をつけよう。
@@ -62,6 +72,12 @@
 
 ## こんどは、ビニタイを切るよ。ビニタイの図面を使うよ。
 
+![wire_cut1.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wire_cut1.png)
+
+![wire_cut2.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wire_cut2.png)
+
+![wire_cut3.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wire_cut3.png)
+
 - 引いた線と同じ長さにビニタイを切るよ。
 - 切ったビニタイは、線の上に並べておくとわかりやすいよ。
 - 2番目のところは切らないでね。
@@ -69,6 +85,8 @@
 - 刃物やビニタイの切り口でケガをしないように気をつけてね。
 
 ## ビニタイをよく見ると、真ん中の針金が片方に出っ張っているのがわかるよ。この出っ張りが入る溝を割り箸に作るよ。
+
+![wire_shape.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wire_shape.png)
 
 - 割り箸の印をつけたところに、溝を作るよ。
 - 割り箸の図面の 1 から 9 までの数字は、ビニタイの図面の番号と対応しているよ。
@@ -79,7 +97,41 @@
 - 鉛筆で書いた目印が消える程度の溝で十分だよ。
 - 割り箸についた削り屑はしっかり払い落として、きれいにしておくよ。
 
+![dig1.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_dig1.png)
+
+定規に紙やすりを巻き付けて持つよ。
+
+![dig2.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_dig2.png)
+
+鉛筆で線を引いたところにあててゆっくり線の上をこすって溝を作るよ。
+
+![dig3.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_dig3.png)
+
+紙やすりが傷んだら、少しずらして、新しいところを使おう。
+
+![dig4.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_dig4.png)
+
+分厚い定規のときは片方の角を使うといいよ。
+
+![wood_dug1.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wood_dug1.png)
+
+これぐらいの溝を作るよ。
+
+![wood_dug3.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wood_dug3.png)
+
+こんな感じ。
+
+![wood_dug2.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_wood_dug2.png)
+
+できたね。
+
 ## いよいよ組み立てるよ。
+
+![bind1.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_bind1.png)
+
+![bind2.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_bind2.png)
+
+![bind3.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_bind3.png)
 
 - 接着剤を使うときは、下に新聞紙などを敷いておくと汚さなくていいよ。
 - 溝のついた割り箸をおいて、溝のあたりに接着剤をつけよう。
@@ -90,7 +142,11 @@
 - 洗濯バサミで割り箸を挟んで固定するよ。
 - 接着剤が乾くまで、しばらくそのままにしておこう。
 
+![done2.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_done2.png)
+
 ## 使ってみよう！
+
+![with_phone.png](https://nyosak.github.io/article-base-doc/media/70815_operation_yagi_n77_n78_with_phone.png)
 
 割り箸につけた印の 2番目のところにスマホの端を置くといいよ。割り箸の先を電波の来る方に向けるといいよ。
 
