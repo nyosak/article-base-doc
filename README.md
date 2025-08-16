@@ -3,6 +3,7 @@
 ## articles
 
 <!-- ARTICLES DESCENDANT -->
+- [割り箸と園芸用ビニタイで作る 5G n77/n78 八木アンテナ — 夏休みの工作教室](docs/a/70815_operation_yagi_n77_n78.md)
 - [Android で方角センサーを使うときの座標について](docs/a/70707_azimuth.md)
 - [八木作戦 — 三射](docs/a/70705_operation_yagi_au.md)
 - [八木作戦 —  二射](docs/a/70628_operation_yagi_au.md)
